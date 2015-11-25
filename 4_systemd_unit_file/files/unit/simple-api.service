@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple API server written in Go
+
+[Service]
+Type=simple
+User=gosrvc
+Group=gosrvc
+WorkingDirectory=/opt/redsofa/simple-api
+ExecStart=/bin/bash -c '/opt/redsofa/simple-api/simple-api >> simple-api.log 2>&1'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+---
+  - name: Set simple-api.service to enabled and started
+    service: name=simple-api.service state=started enabled=true

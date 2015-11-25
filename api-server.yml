@@ -1,0 +1,12 @@
+---
+- hosts: api-server
+  remote_user: redsofa
+  sudo: yes
+
+  roles:
+    - 1_copy_server_artifacts
+    - 2_create_user_to_run_service
+    - 3_file_permissions
+    - 4_systemd_unit_file
+    - 5_enable_and_start_service
+    - 6_log_rotation

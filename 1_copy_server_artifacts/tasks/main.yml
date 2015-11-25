@@ -1,0 +1,9 @@
+---
+  - name: Create server artifacts directory
+    file: path=/opt/redsofa/simple-api state=directory
+
+  - name: Copy server artifacts (config.json)
+    copy: src=simple-api/config.json dest=/opt/redsofa/simple-api
+
+  - name: Copy server artifacts (simple-api server binary)
+    copy: src=simple-api/simple-api dest=/opt/redsofa/simple-api

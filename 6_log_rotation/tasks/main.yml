@@ -1,0 +1,8 @@
+---
+- name: Setup logrotate config file for simple-api logs
+  copy: 
+    src=simple-api 
+    dest=/etc/logrotate.d/ 
+    owner=root 
+    group=root 
+    mode=0644

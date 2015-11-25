@@ -1,0 +1,3 @@
+---
+- name:  Create user to run simple-api
+  command: adduser -r -M -s /bin/false {{go_srvc_unix_user}}

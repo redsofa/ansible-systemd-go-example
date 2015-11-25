@@ -1,0 +1,6 @@
+---
+###################################
+# Operating system users and groups
+###################################
+go_srvc_unix_user : gosrvc
+go_srvc_unix_group : gosrvc

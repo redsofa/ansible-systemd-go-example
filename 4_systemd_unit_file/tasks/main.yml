@@ -1,0 +1,8 @@
+---
+- name: Setup systemd unit file
+  copy: 
+    src=unit/simple-api.service 
+    dest=/usr/lib/systemd/system/ 
+    owner=root 
+    group=root 
+    mode=0644

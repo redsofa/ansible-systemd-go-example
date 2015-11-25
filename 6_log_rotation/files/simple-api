@@ -1,0 +1,10 @@
+/opt/redsofa/simple-api/simple-api.log {
+    missingok
+    notifempty
+    compress
+    size 20k
+    daily
+    create 0600 gosrvc gosrvc
+    su
+    copytruncate
+}

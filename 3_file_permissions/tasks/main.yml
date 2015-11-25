@@ -1,0 +1,12 @@
+---
+  - name: Change ownership of /opt/redsofa directory recursively
+    command: chown -R {{go_srvc_unix_user}}:{{go_srvc_unix_group}} /opt/redsofa
+
+  - name: Change permissions on files
+    command: find /opt/redsofa -type f -exec chmod 600 {} \;
+
+  - name: Change permissions on directories
+    command: find /opt/redsofa -type d -exec chmod 700 {} \;
+
+  - name: Make simple-api executable
+    command: chmod 500 /opt/redsofa/simple-api/simple-api
